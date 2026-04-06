@@ -10,30 +10,30 @@ st.title("📊 Product Review Sentiment Analysis")
 
 uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
 with st.markdown("ℹ️ How to Use & Features"):
-
-    st.markdown("""
-### 🚀 How to Use
-1. Upload a PDF file containing product reviews  
-2. Wait for the app to process the file  
-3. View sentiment results (Positive / Negative / Neutral)  
-4. Explore charts and summary metrics  
-5. Use filters to view specific sentiments  
-6. Select a Review ID to see full review  
-7. Download results as CSV  
-
----
-
-### ✨ Features
-- 📄 Upload PDF with product reviews  
-- 🔍 Extract text automatically  
-- ✂️ Split reviews using blank lines  
-- 🧠 Sentiment analysis using TextBlob  
-- 📊 Pie chart, Bar chart, Histogram  
-- 📈 Summary metrics  
-- 🔎 Filter reviews  
-- 📌 View full review details  
-- ⬇️ Download CSV file  
-""")
+if not uploaded_file:
+            st.markdown("""
+        ### 🚀 How to Use
+        1. Upload a PDF file containing product reviews  
+        2. Wait for the app to process the file  
+        3. View sentiment results (Positive / Negative / Neutral)  
+        4. Explore charts and summary metrics  
+        5. Use filters to view specific sentiments  
+        6. Select a Review ID to see full review  
+        7. Download results as CSV  
+        
+        ---
+        
+        ### ✨ Features
+        - 📄 Upload PDF with product reviews  
+        - 🔍 Extract text automatically  
+        - ✂️ Split reviews using blank lines  
+        - 🧠 Sentiment analysis using TextBlob  
+        - 📊 Pie chart, Bar chart, Histogram  
+        - 📈 Summary metrics  
+        - 🔎 Filter reviews  
+        - 📌 View full review details  
+        - ⬇️ Download CSV file  
+        """)
 
 def extract_text(file):
     try:
