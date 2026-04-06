@@ -10,9 +10,8 @@ st.title("📊 Product Review Sentiment Analysis")
 
 uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
 if not uploaded_file:
-        with st.markdown("ℹ️ How to Use & Features"):
-
-            st.markdown("""
+    with st.markdown("ℹ️ How to Use & Features"):
+        st.markdown("""
         ### 🚀 How to Use
         1. Upload a PDF file containing product reviews  
         2. Wait for the app to process the file  
